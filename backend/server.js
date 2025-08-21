@@ -8,6 +8,7 @@ require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+JWT_EXPIRES_IN=7d  // in .env file
 
 // Security middleware
 app.use(helmet({
@@ -21,6 +22,7 @@ app.use(helmet({
             mediaSrc: ["'self'", "blob:"],
             connectSrc: ["'self'"]
         }
+    const rateLimit = require('express-rate-limit');
     }
 }));
 
